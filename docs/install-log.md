@@ -50,3 +50,24 @@ J2REDIR="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 
 # DERBY_HOME -- Apache Derby DB 경로. 추후 Hive 메타스토어(DB) 구축 시 사용 예정 (현재 OpenJDK 미포함으로 주석 처리).
 #DERBY_HOME="/usr/lib/jvm/java-8-openjdk-amd64/db"
+
+# 4. Hadoop 설치 (버전 결정)
+- **현재 날짜**: 2026년 5월
+- **선택 버전**: Hadoop 3.4.3 (Stable)
+- **결정 이유**: 
+  - 최신 3.5.0보다는 안정성이 검증된 3.4 라인의 최신 패치 버전을 선택.
+  - 현재 설치된 OpenJDK 8과의 하위 호환성을 고려함.
+  - 3.2.1 강의 내용과 설정 방식이 호환됨을 확인함.
+# 1. 홈 디렉토리로 이동
+cd ~
+
+# 2. 하둡 3.4.3 다운로드 (공식 아카이브 사이트 사용)
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.4.3/hadoop-3.4.3.tar.gz
+
+# 3. 압축 해제
+tar -xvzf hadoop-3.4.3.tar.gz
+
+# 4. 폴더 이름을 'hadoop'으로 간결하게 변경 (나중에 경로 설정 시 편리함)
+mv hadoop-3.4.3 hadoop
+
+ 
